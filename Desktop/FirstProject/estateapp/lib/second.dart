@@ -19,7 +19,7 @@ class _SecondScreenState extends State<SecondScreen> {
           child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: Container(
-              color: Colors.white24,
+              color: Colors.white30,
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.center,
                 children: [
