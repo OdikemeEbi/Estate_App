@@ -26,12 +26,16 @@ class _SecondScreenState extends State<SecondScreen> {
                   const SizedBox(
                     height: 30,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(right: 300),
-                    child: Text(
-                      'Current location',
-                      style: TextStyle(color: Colors.black26),
-                      textAlign: TextAlign.justify,
+                  Container(
+                    // height: 20,
+                    width: double.infinity,
+                    child: const Padding(
+                      padding: EdgeInsets.only(right: 300),
+                      child: Text(
+                        'Current location',
+                        style: TextStyle(color: Colors.black26),
+                        textAlign: TextAlign.justify,
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -72,7 +76,7 @@ class _SecondScreenState extends State<SecondScreen> {
                     child: Container(
                       //decoration:
                       //BoxDecoration(borderRadius: BorderRadius.circular(2)),
-                      width: 440,
+                      width: double.infinity,
                       color: Colors.white,
                       child: Row(
                         children: [
@@ -104,12 +108,130 @@ class _SecondScreenState extends State<SecondScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 30),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                  Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: double.infinity),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 30),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                  clipBehavior: Clip.none,
+                                  width: 200,
+                                  height: 150,
+                                  decoration: const BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              "assets/images/pic2.jpg"),
+                                          fit: BoxFit.cover),
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(10)))
+                                  // decoration: BoxDecoration(shape: BoxShape.circle),
+                                  // margin: EdgeInsets.all(10),
+                                  // width: 200,
+                                  // height: 200,
+                                  // child: const Image(
+                                  //   image: AssetImage('assets/images/pic2.jpg'),
+                                  //   fit: BoxFit.cover,
+                                  // ),
+                                  ),
+                              const SizedBox(
+                                height: 15,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 90),
+                                child: Row(
+                                  children: [
+                                    ElevatedButton(
+                                      onPressed: (() {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ThirdScreen()),
+                                        );
+                                      }),
+                                      child: const Text(
+                                        "FOR SALE",
+                                        style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.w900,
+                                            color: Colors.white),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    const Text(
+                                      "4.5",
+                                      style: TextStyle(fontSize: 10),
+                                    ),
+                                    const Icon(
+                                      Icons.star,
+                                      color: Colors.yellow,
+                                      size: 10,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 110),
+                                child: Row(
+                                  children: const [
+                                    Text(
+                                      "Price: \$45000",
+                                      style: TextStyle(
+                                          fontSize: 15, color: Colors.black),
+                                    ),
+                                    SizedBox(
+                                      height: 40,
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 100),
+                                child: Row(
+                                  children: const [
+                                    Text(
+                                      "Munachi Spring House",
+                                      style: TextStyle(
+                                          fontSize: 10,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w900),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 120),
+                                child: Row(
+                                  children: const [
+                                    Text(
+                                      "5 bds _ 4ba _   4,402 sqft",
+                                      style: TextStyle(
+                                        fontSize: 7,
+                                        color: Colors.black87,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 15,
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Container(
                                 width: 200,
@@ -117,24 +239,25 @@ class _SecondScreenState extends State<SecondScreen> {
                                 decoration: const BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
-                                            "assets/images/pic2.jpg"),
+                                            "assets/images/pic01.jpg"),
                                         fit: BoxFit.cover),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(10)))
-                                // decoration: BoxDecoration(shape: BoxShape.circle),
-                                // margin: EdgeInsets.all(10),
-                                // width: 200,
-                                // height: 200,
-                                // child: const Image(
-                                //   image: AssetImage('assets/images/pic2.jpg'),
-                                //   fit: BoxFit.cover,
-                                // ),
+                                // Container(
+                                //   clipBehavior: Clip.none,
+                                //   margin: EdgeInsets.all(10),
+                                //   width: 200,
+                                //   height: 200,
+                                //   child: const Image(
+                                //     image: AssetImage('assets/images/pic4.jpg'),
+                                //     fit: BoxFit.cover,
+                                //   ),
                                 ),
                             const SizedBox(
                               height: 15,
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(right: 90),
+                              padding: const EdgeInsets.only(right: 70),
                               child: Row(
                                 children: [
                                   ElevatedButton(
@@ -143,7 +266,7 @@ class _SecondScreenState extends State<SecondScreen> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const ThirdScreen()),
+                                                const FouthScreen()),
                                       );
                                     }),
                                     child: const Text(
@@ -155,11 +278,14 @@ class _SecondScreenState extends State<SecondScreen> {
                                     ),
                                   ),
                                   const SizedBox(
-                                    width: 10,
+                                    width: 20,
                                   ),
                                   const Text(
                                     "4.5",
                                     style: TextStyle(fontSize: 10),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
                                   ),
                                   const Icon(
                                     Icons.star,
@@ -172,6 +298,7 @@ class _SecondScreenState extends State<SecondScreen> {
                             Padding(
                               padding: const EdgeInsets.only(right: 110),
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: const [
                                   Text(
                                     "Price: \$45000",
@@ -180,7 +307,7 @@ class _SecondScreenState extends State<SecondScreen> {
                                   ),
                                   SizedBox(
                                     height: 40,
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
@@ -191,10 +318,8 @@ class _SecondScreenState extends State<SecondScreen> {
                                   Text(
                                     "Munachi Spring House",
                                     style: TextStyle(
-                                        fontSize: 10,
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w900),
-                                  ),
+                                        fontSize: 10, color: Colors.black),
+                                  )
                                 ],
                               ),
                             ),
@@ -210,130 +335,15 @@ class _SecondScreenState extends State<SecondScreen> {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 15,
+                                    height: 20,
                                   )
                                 ],
                               ),
                             )
                           ],
                         ),
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(
-                              width: 200,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                      image:
-                                          AssetImage("assets/images/pic01.jpg"),
-                                      fit: BoxFit.cover),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)))
-                              // Container(
-                              //   clipBehavior: Clip.none,
-                              //   margin: EdgeInsets.all(10),
-                              //   width: 200,
-                              //   height: 200,
-                              //   child: const Image(
-                              //     image: AssetImage('assets/images/pic4.jpg'),
-                              //     fit: BoxFit.cover,
-                              //   ),
-                              ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 70),
-                            child: Row(
-                              children: [
-                                ElevatedButton(
-                                  onPressed: (() {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const FouthScreen()),
-                                    );
-                                  }),
-                                  child: const Text(
-                                    "FOR SALE",
-                                    style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.w900,
-                                        color: Colors.white),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                const Text(
-                                  "4.5",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                const Icon(
-                                  Icons.star,
-                                  color: Colors.yellow,
-                                  size: 10,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 110),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  "Price: \$45000",
-                                  style: TextStyle(
-                                      fontSize: 15, color: Colors.black),
-                                ),
-                                SizedBox(
-                                  height: 40,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 100),
-                            child: Row(
-                              children: const [
-                                Text(
-                                  "Munachi Spring House",
-                                  style: TextStyle(
-                                      fontSize: 10, color: Colors.black),
-                                )
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 120),
-                            child: Row(
-                              children: const [
-                                Text(
-                                  "5 bds _ 4ba _   4,402 sqft",
-                                  style: TextStyle(
-                                    fontSize: 7,
-                                    color: Colors.black87,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 30),

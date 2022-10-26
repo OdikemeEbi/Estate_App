@@ -202,13 +202,16 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   height: 5,
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                  padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                   child: Container(
+                    constraints: BoxConstraints(maxWidth: double.infinity),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                            "Quality and beautiful interiors with 4bedrooms\n 5bathroom, 2kitchens, swimming pools etc.")
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: const [
+                        const Text(
+                          "Quality and beautiful interiors with 4bedrooms\n 5bathroom, 2kitchens, swimming pools etc.",
+                          textAlign: TextAlign.start,
+                        ),
                       ],
                     ),
                     decoration: const BoxDecoration(
@@ -234,54 +237,48 @@ class _ThirdScreenState extends State<ThirdScreen> {
                     // color: Colors.white,
                   ),
                 ),
-                Container(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          decoration: const BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/pic7.jpg"),
-                                  fit: BoxFit.cover)),
-                          width: 90,
-                          height: 60,
-                        ),
-                        Container(
-                          decoration: const BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/pic8.jpg"),
-                                  fit: BoxFit.cover)),
-                          width: 90,
-                          height: 60,
-                        ),
-                        Container(
-                          decoration: const BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/pic9.jpg"),
-                                  fit: BoxFit.cover)),
-                          width: 90,
-                          height: 60,
-                        ),
-                        Container(
-                          decoration: const BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/pic7.jpg"),
-                                  fit: BoxFit.fill)),
-                          width: 90,
-                          height: 60,
-                        )
-                      ],
-                    ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/pic7.jpg"),
+                                fit: BoxFit.cover)),
+                        width: 60,
+                        height: 60,
+                      ),
+                      Container(
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/pic8.jpg"),
+                                fit: BoxFit.cover)),
+                        width: 60,
+                        height: 60,
+                      ),
+                      Container(
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/pic9.jpg"),
+                                fit: BoxFit.cover)),
+                        width: 60,
+                        height: 60,
+                      ),
+                      Container(
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/pic7.jpg"),
+                                fit: BoxFit.fill)),
+                        width: 60,
+                        height: 60,
+                      )
+                    ],
                   ),
                 ),
                 Padding(
